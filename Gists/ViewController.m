@@ -7,13 +7,14 @@
 //
 
 #import "ViewController.h"
+#import "AppDelegate.h"
 #import "Github.h"
 #import "Gist.h"
 #import "File.h"
 #import "FileContentTableViewCell.h"
 #import "CommentTableViewCell.h"
 
-@interface ViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface ViewController () <UITableViewDataSource, UITableViewDelegate, GithubDelegate>
 @property (nonatomic, strong) Github *github;
 @property (nonatomic, strong) Gist *currentGist;
 
@@ -30,7 +31,15 @@
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([CommentTableViewCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([CommentTableViewCell class])];
     
     self.navigationController.toolbarHidden = YES;
-    self.github = [[Github alloc] init];
+    
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    self.github = appDelegate.github;
+    self.github.delegate = self;
+}
+
+- (UIViewController *)viewControllerForShowingGithubInterfaces
+{
+    return self;
 }
 
 - (IBAction)showCameraPressed:(id)sender
@@ -56,6 +65,32 @@
         }];
     }];
 }
+
+- (IBAction)replyPressed:(id)sender
+{
+    // TODO: In a complete application, we could present some custom UI for taking user input. For now, we'll just show an alert with a text field.
+    
+    __weak typeof(self) weakSelf = self;
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Post Comment", @"Post Comment alert title") message:nil preferredStyle:UIAlertControllerStyleAlert];
+    [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+        textField.autocapitalizationType = UITextAutocapitalizationTypeSentences;
+    }];
+    [alert addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"Post Comment", @"Post Comment alert continue button title") style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        [strongSelf.github postComment:[[alert.textFields firstObject] text] toGist:strongSelf.currentGist completion:^(NSError *error) {
+            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                __strong typeof(weakSelf) strongSelf = weakSelf;
+                [strongSelf.tableView reloadData];
+            }];
+        }];
+    }]];
+    [alert addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", @"Post Comment alert cancel button title") style:UIAlertActionStyleCancel handler:nil]];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+#pragma mark - UITableView
+
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {

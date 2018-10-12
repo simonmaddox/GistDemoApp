@@ -37,7 +37,11 @@
                     </view>
                     <toolbarItems>
                         <barButtonItem systemItem="flexibleSpace" id="bhf-ub-tdp"/>
-                        <barButtonItem systemItem="reply" id="Z9e-4k-83o"/>
+                        <barButtonItem systemItem="reply" id="Z9e-4k-83o">
+                            <connections>
+                                <action selector="replyPressed:" destination="BYZ-38-t0r" id="39r-mG-vPO"/>
+                            </connections>
+                        </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="Gist" id="oBw-wg-RJX">
                         <barButtonItem key="rightBarButtonItem" systemItem="camera" id="MW2-O5-gXL">
