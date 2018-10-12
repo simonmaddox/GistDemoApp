@@ -13,6 +13,12 @@
 		F4ACC3E6217097F900F27FE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4ACC3E5217097F900F27FE7 /* Assets.xcassets */; };
 		F4ACC3E9217097F900F27FE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4ACC3E7217097F900F27FE7 /* LaunchScreen.storyboard */; };
 		F4ACC3EC217097F900F27FE7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F4ACC3EB217097F900F27FE7 /* main.m */; };
+		F4ACC3F42170984500F27FE7 /* Gist.m in Sources */ = {isa = PBXBuildFile; fileRef = F4ACC3F32170984500F27FE7 /* Gist.m */; };
+		F4ACC3F7217098B300F27FE7 /* File.m in Sources */ = {isa = PBXBuildFile; fileRef = F4ACC3F6217098B300F27FE7 /* File.m */; };
+		F4ACC3FA21709A3C00F27FE7 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = F4ACC3F921709A3C00F27FE7 /* User.m */; };
+		F4ACC3FD21709A6800F27FE7 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = F4ACC3FC21709A6800F27FE7 /* Comment.m */; };
+		F4ACC4042170B59900F27FE7 /* Github.m in Sources */ = {isa = PBXBuildFile; fileRef = F4ACC4032170B59900F27FE7 /* Github.m */; };
+		F4ACC4072170B7F900F27FE7 /* HTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F4ACC4062170B7F900F27FE7 /* HTTPRequestOperation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +32,19 @@
 		F4ACC3E8217097F900F27FE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4ACC3EA217097F900F27FE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4ACC3EB217097F900F27FE7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F4ACC3F22170984500F27FE7 /* Gist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Gist.h; sourceTree = "<group>"; };
+		F4ACC3F32170984500F27FE7 /* Gist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Gist.m; sourceTree = "<group>"; };
+		F4ACC3F5217098B300F27FE7 /* File.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = File.h; sourceTree = "<group>"; };
+		F4ACC3F6217098B300F27FE7 /* File.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = File.m; sourceTree = "<group>"; };
+		F4ACC3F821709A3C00F27FE7 /* User.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		F4ACC3F921709A3C00F27FE7 /* User.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		F4ACC3FB21709A6800F27FE7 /* Comment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
+		F4ACC3FC21709A6800F27FE7 /* Comment.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
+		F4ACC4012170B4DC00F27FE7 /* ObjectProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjectProtocol.h; sourceTree = "<group>"; };
+		F4ACC4022170B59900F27FE7 /* Github.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Github.h; sourceTree = "<group>"; };
+		F4ACC4032170B59900F27FE7 /* Github.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Github.m; sourceTree = "<group>"; };
+		F4ACC4052170B7F900F27FE7 /* HTTPRequestOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTTPRequestOperation.h; sourceTree = "<group>"; };
+		F4ACC4062170B7F900F27FE7 /* HTTPRequestOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HTTPRequestOperation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +82,19 @@
 				F4ACC3DF217097F700F27FE7 /* ViewController.h */,
 				F4ACC3E0217097F700F27FE7 /* ViewController.m */,
 				F4ACC3E2217097F700F27FE7 /* Main.storyboard */,
+				F4ACC4012170B4DC00F27FE7 /* ObjectProtocol.h */,
+				F4ACC3F22170984500F27FE7 /* Gist.h */,
+				F4ACC3F32170984500F27FE7 /* Gist.m */,
+				F4ACC3F5217098B300F27FE7 /* File.h */,
+				F4ACC3F6217098B300F27FE7 /* File.m */,
+				F4ACC3F821709A3C00F27FE7 /* User.h */,
+				F4ACC3F921709A3C00F27FE7 /* User.m */,
+				F4ACC3FB21709A6800F27FE7 /* Comment.h */,
+				F4ACC3FC21709A6800F27FE7 /* Comment.m */,
+				F4ACC4022170B59900F27FE7 /* Github.h */,
+				F4ACC4032170B59900F27FE7 /* Github.m */,
+				F4ACC4052170B7F900F27FE7 /* HTTPRequestOperation.h */,
+				F4ACC4062170B7F900F27FE7 /* HTTPRequestOperation.m */,
 				F4ACC3E5217097F900F27FE7 /* Assets.xcassets */,
 				F4ACC3E7217097F900F27FE7 /* LaunchScreen.storyboard */,
 				F4ACC3EA217097F900F27FE7 /* Info.plist */,
@@ -141,9 +173,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4ACC3FD21709A6800F27FE7 /* Comment.m in Sources */,
+				F4ACC3F7217098B300F27FE7 /* File.m in Sources */,
+				F4ACC3F42170984500F27FE7 /* Gist.m in Sources */,
+				F4ACC3FA21709A3C00F27FE7 /* User.m in Sources */,
 				F4ACC3E1217097F700F27FE7 /* ViewController.m in Sources */,
 				F4ACC3EC217097F900F27FE7 /* main.m in Sources */,
+				F4ACC4042170B59900F27FE7 /* Github.m in Sources */,
 				F4ACC3DE217097F700F27FE7 /* AppDelegate.m in Sources */,
+				F4ACC4072170B7F900F27FE7 /* HTTPRequestOperation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
