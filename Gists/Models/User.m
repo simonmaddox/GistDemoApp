@@ -20,4 +20,16 @@
     return user;
 }
 
+- (NSString *)description
+{
+    return [[[super description] stringByAppendingString:@" - "] stringByAppendingString:self.login];
+}
+
++ (instancetype)anonymousUser
+{
+    User *user = [[User alloc] init];
+    user.login = @"Anonymous";
+    return user;
+}
+
 @end

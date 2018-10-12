@@ -29,12 +29,10 @@
     if (![components.host isEqualToString:@"gist.github.com"]){
         return nil;
     }
-    
-    NSArray <NSString *> *pathComponents = [components.path pathComponents];
-    
+        
     // TODO: Are there any more checks we can do to ensure this is a gist URL?
     
-    return [pathComponents lastObject];
+    return [components.path lastPathComponent];
 }
 
 + (NSURL *)APIURLForGistID:(NSString *)identifier
@@ -59,7 +57,10 @@
         }
         
         Gist *gist = [Gist objectFromDictionary:responseObject];
-        completion(gist, error);
+        [self fetchCommentsforGist:gist completion:^(NSArray * _Nonnull comments, NSError * _Nonnull error) {
+            gist.comments = comments;
+            completion(gist, error);
+        }];
     }];
 }
 

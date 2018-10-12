@@ -35,4 +35,9 @@
     return [NSArray arrayWithArray:files];
 }
 
+- (NSString *)description
+{
+    return [[[super description] stringByAppendingString:@" - "] stringByAppendingString:self.filename];
+}
+
 @end

@@ -15,7 +15,8 @@
 {
     Comment *comment = [[Comment alloc] init];
     
-    comment.user = [User objectFromDictionary:dictionary[@"user"]];
+    id user = dictionary[@"user"];
+    comment.user = [user isEqual:[NSNull null]] ? [User anonymousUser] : [User objectFromDictionary:dictionary[@"user"]];
     comment.body = dictionary[@"body"];
     
     return comment;
@@ -31,6 +32,11 @@
         }
     }
     return [NSArray arrayWithArray:comments];
+}
+
+- (NSString *)description
+{
+    return [[[super description] stringByAppendingString:@" - "] stringByAppendingString:self.body];
 }
 
 @end

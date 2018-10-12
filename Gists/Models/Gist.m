@@ -28,4 +28,9 @@
     return gist;
 }
 
+- (NSString *)description
+{
+    return [[[super description] stringByAppendingString:@" - "] stringByAppendingString:self.identifier];
+}
+
 @end

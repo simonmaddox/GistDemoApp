@@ -19,6 +19,10 @@
 		F4ACC3FD21709A6800F27FE7 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = F4ACC3FC21709A6800F27FE7 /* Comment.m */; };
 		F4ACC4042170B59900F27FE7 /* Github.m in Sources */ = {isa = PBXBuildFile; fileRef = F4ACC4032170B59900F27FE7 /* Github.m */; };
 		F4ACC4072170B7F900F27FE7 /* HTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F4ACC4062170B7F900F27FE7 /* HTTPRequestOperation.m */; };
+		F4ACC4192170D07200F27FE7 /* FileContentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F4ACC4172170D07200F27FE7 /* FileContentTableViewCell.m */; };
+		F4ACC41A2170D07200F27FE7 /* FileContentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4ACC4182170D07200F27FE7 /* FileContentTableViewCell.xib */; };
+		F4ACC41E2170D0DD00F27FE7 /* CommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F4ACC41C2170D0DD00F27FE7 /* CommentTableViewCell.m */; };
+		F4ACC41F2170D0DD00F27FE7 /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4ACC41D2170D0DD00F27FE7 /* CommentTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +49,12 @@
 		F4ACC4032170B59900F27FE7 /* Github.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Github.m; sourceTree = "<group>"; };
 		F4ACC4052170B7F900F27FE7 /* HTTPRequestOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTTPRequestOperation.h; sourceTree = "<group>"; };
 		F4ACC4062170B7F900F27FE7 /* HTTPRequestOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HTTPRequestOperation.m; sourceTree = "<group>"; };
+		F4ACC4162170D07200F27FE7 /* FileContentTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileContentTableViewCell.h; sourceTree = "<group>"; };
+		F4ACC4172170D07200F27FE7 /* FileContentTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileContentTableViewCell.m; sourceTree = "<group>"; };
+		F4ACC4182170D07200F27FE7 /* FileContentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FileContentTableViewCell.xib; sourceTree = "<group>"; };
+		F4ACC41B2170D0DD00F27FE7 /* CommentTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentTableViewCell.h; sourceTree = "<group>"; };
+		F4ACC41C2170D0DD00F27FE7 /* CommentTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommentTableViewCell.m; sourceTree = "<group>"; };
+		F4ACC41D2170D0DD00F27FE7 /* CommentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,11 +87,29 @@
 		F4ACC3DB217097F700F27FE7 /* Gists */ = {
 			isa = PBXGroup;
 			children = (
+				F4ACC4082170C7E400F27FE7 /* Models */,
 				F4ACC3DC217097F700F27FE7 /* AppDelegate.h */,
 				F4ACC3DD217097F700F27FE7 /* AppDelegate.m */,
 				F4ACC3DF217097F700F27FE7 /* ViewController.h */,
 				F4ACC3E0217097F700F27FE7 /* ViewController.m */,
+				F4ACC4162170D07200F27FE7 /* FileContentTableViewCell.h */,
+				F4ACC4172170D07200F27FE7 /* FileContentTableViewCell.m */,
+				F4ACC4182170D07200F27FE7 /* FileContentTableViewCell.xib */,
+				F4ACC41B2170D0DD00F27FE7 /* CommentTableViewCell.h */,
+				F4ACC41C2170D0DD00F27FE7 /* CommentTableViewCell.m */,
+				F4ACC41D2170D0DD00F27FE7 /* CommentTableViewCell.xib */,
 				F4ACC3E2217097F700F27FE7 /* Main.storyboard */,
+				F4ACC3E5217097F900F27FE7 /* Assets.xcassets */,
+				F4ACC3E7217097F900F27FE7 /* LaunchScreen.storyboard */,
+				F4ACC3EA217097F900F27FE7 /* Info.plist */,
+				F4ACC3EB217097F900F27FE7 /* main.m */,
+			);
+			path = Gists;
+			sourceTree = "<group>";
+		};
+		F4ACC4082170C7E400F27FE7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
 				F4ACC4012170B4DC00F27FE7 /* ObjectProtocol.h */,
 				F4ACC3F22170984500F27FE7 /* Gist.h */,
 				F4ACC3F32170984500F27FE7 /* Gist.m */,
@@ -95,12 +123,8 @@
 				F4ACC4032170B59900F27FE7 /* Github.m */,
 				F4ACC4052170B7F900F27FE7 /* HTTPRequestOperation.h */,
 				F4ACC4062170B7F900F27FE7 /* HTTPRequestOperation.m */,
-				F4ACC3E5217097F900F27FE7 /* Assets.xcassets */,
-				F4ACC3E7217097F900F27FE7 /* LaunchScreen.storyboard */,
-				F4ACC3EA217097F900F27FE7 /* Info.plist */,
-				F4ACC3EB217097F900F27FE7 /* main.m */,
 			);
-			path = Gists;
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,7 +186,9 @@
 			files = (
 				F4ACC3E9217097F900F27FE7 /* LaunchScreen.storyboard in Resources */,
 				F4ACC3E6217097F900F27FE7 /* Assets.xcassets in Resources */,
+				F4ACC41F2170D0DD00F27FE7 /* CommentTableViewCell.xib in Resources */,
 				F4ACC3E4217097F700F27FE7 /* Main.storyboard in Resources */,
+				F4ACC41A2170D07200F27FE7 /* FileContentTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,6 +200,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4ACC3FD21709A6800F27FE7 /* Comment.m in Sources */,
+				F4ACC41E2170D0DD00F27FE7 /* CommentTableViewCell.m in Sources */,
+				F4ACC4192170D07200F27FE7 /* FileContentTableViewCell.m in Sources */,
 				F4ACC3F7217098B300F27FE7 /* File.m in Sources */,
 				F4ACC3F42170984500F27FE7 /* Gist.m in Sources */,
 				F4ACC3FA21709A3C00F27FE7 /* User.m in Sources */,

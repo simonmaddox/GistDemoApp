@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *login;
 @property (nonatomic, copy) NSURL *avatarURL;
 
++ (instancetype)anonymousUser;
+
 @end
 
 NS_ASSUME_NONNULL_END
