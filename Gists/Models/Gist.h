@@ -23,6 +23,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSURL *HTMLURL;
 @property (nonatomic, copy) NSURL *commentsURL;
 
+@property (nonatomic, copy) NSString *title;
+
 @property (nonatomic, strong) NSArray <File *> *files;
 @property (nonatomic, strong) User * owner;
 @property (nonatomic, strong) NSArray <Comment *> *comments;

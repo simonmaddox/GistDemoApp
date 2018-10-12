@@ -37,8 +37,9 @@
 {
     // Long body: https://gist.github.com/simonmaddox/bc7c4f08399eed514e4821c4b52bd792
     // Lots of comments: https://gist.github.com/asweigart/6912168
+    // Multiple files: https://gist.github.com/mattboldt/7621795
 
-    [self cameraScannedURL:[NSURL URLWithString:@"https://gist.github.com/asweigart/6912168/"]];
+    [self cameraScannedURL:[NSURL URLWithString:@"https://gist.github.com/simonmaddox/ad55000013918c85d24c29c291bfa90f"]];
 }
 
 - (void)cameraScannedURL:(NSURL *)URL
@@ -49,6 +50,7 @@
         strongSelf.currentGist = gist;
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
             __strong typeof(weakSelf) strongSelf = weakSelf;
+            strongSelf.title = gist.title;
             [strongSelf.navigationController setToolbarHidden:NO animated:YES];
             [strongSelf.tableView reloadData];
         }];
@@ -78,9 +80,9 @@
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
     if (section == 0){
-        return @"Files";
+        return NSLocalizedString(@"Files", @"Files section title");
     } else if (section == 1){
-        return @"Comments";
+        return NSLocalizedString(@"Comments", @"Comments section title");
     }
     return nil;
 }
@@ -89,8 +91,8 @@
 {
     if (indexPath.section == 0){
         FileContentTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([FileContentTableViewCell class]) forIndexPath:indexPath];
-            cell.file = self.currentGist.files[indexPath.row];
-            return cell;
+        cell.file = self.currentGist.files[indexPath.row];
+        return cell;
     } else if (indexPath.section == 1){
         CommentTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([CommentTableViewCell class]) forIndexPath:indexPath];
         cell.comment = self.currentGist.comments[indexPath.row];

@@ -22,6 +22,9 @@
     gist.HTMLURL = [NSURL URLWithString:dictionary[@"html_url"]];
     gist.commentsURL = [NSURL URLWithString:dictionary[@"comments_url"]];
     
+    id title = dictionary[@"description"];
+    gist.title = [title isEqual:[NSNull null]] ? NSLocalizedString(@"Untitled Gist", @"Untitled gist title") : title;
+    
     gist.files = [File objectsFromArray:[dictionary[@"files"] allValues]];
     gist.owner = [User objectFromDictionary:dictionary[@"owner"]];
         
