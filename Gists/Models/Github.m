@@ -52,6 +52,9 @@
 
 + (NSString *)gistIDFromURLString:(NSString *)URLString
 {
+    if (!URLString){
+        return nil;
+    }
     NSURLComponents *components = [NSURLComponents componentsWithString:URLString];
     
     if (![components.host isEqualToString:@"gist.github.com"]){

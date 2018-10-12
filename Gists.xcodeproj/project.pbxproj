@@ -24,6 +24,7 @@
 		F4ACC41E2170D0DD00F27FE7 /* CommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F4ACC41C2170D0DD00F27FE7 /* CommentTableViewCell.m */; };
 		F4ACC41F2170D0DD00F27FE7 /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4ACC41D2170D0DD00F27FE7 /* CommentTableViewCell.xib */; };
 		F4ACC4232170E7A200F27FE7 /* NSURLComponents+FindQueryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F4ACC4222170E7A200F27FE7 /* NSURLComponents+FindQueryItem.m */; };
+		F4ACC4272170ED6E00F27FE7 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4ACC4262170ED6E00F27FE7 /* CameraViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,8 @@
 		F4ACC41D2170D0DD00F27FE7 /* CommentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentTableViewCell.xib; sourceTree = "<group>"; };
 		F4ACC4212170E7A200F27FE7 /* NSURLComponents+FindQueryItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSURLComponents+FindQueryItem.h"; sourceTree = "<group>"; };
 		F4ACC4222170E7A200F27FE7 /* NSURLComponents+FindQueryItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSURLComponents+FindQueryItem.m"; sourceTree = "<group>"; };
+		F4ACC4252170ED6E00F27FE7 /* CameraViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
+		F4ACC4262170ED6E00F27FE7 /* CameraViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +97,8 @@
 				F4ACC4082170C7E400F27FE7 /* Models */,
 				F4ACC3DC217097F700F27FE7 /* AppDelegate.h */,
 				F4ACC3DD217097F700F27FE7 /* AppDelegate.m */,
+				F4ACC4252170ED6E00F27FE7 /* CameraViewController.h */,
+				F4ACC4262170ED6E00F27FE7 /* CameraViewController.m */,
 				F4ACC3DF217097F700F27FE7 /* ViewController.h */,
 				F4ACC3E0217097F700F27FE7 /* ViewController.m */,
 				F4ACC4162170D07200F27FE7 /* FileContentTableViewCell.h */,
@@ -221,6 +226,7 @@
 				F4ACC3FA21709A3C00F27FE7 /* User.m in Sources */,
 				F4ACC3E1217097F700F27FE7 /* ViewController.m in Sources */,
 				F4ACC3EC217097F900F27FE7 /* main.m in Sources */,
+				F4ACC4272170ED6E00F27FE7 /* CameraViewController.m in Sources */,
 				F4ACC4042170B59900F27FE7 /* Github.m in Sources */,
 				F4ACC3DE217097F700F27FE7 /* AppDelegate.m in Sources */,
 				F4ACC4072170B7F900F27FE7 /* HTTPRequestOperation.m in Sources */,

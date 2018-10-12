@@ -13,8 +13,9 @@
 #import "File.h"
 #import "FileContentTableViewCell.h"
 #import "CommentTableViewCell.h"
+#import "CameraViewController.h"
 
-@interface ViewController () <UITableViewDataSource, UITableViewDelegate, GithubDelegate>
+@interface ViewController () <UITableViewDataSource, UITableViewDelegate, GithubDelegate, CameraDelegate>
 @property (nonatomic, strong) Github *github;
 @property (nonatomic, strong) Gist *currentGist;
 
@@ -42,17 +43,21 @@
     return self;
 }
 
-- (IBAction)showCameraPressed:(id)sender
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"ShowCamera"]){
+        UINavigationController *navigationController = (UINavigationController *) segue.destinationViewController;
+        CameraViewController *viewController = (CameraViewController *) navigationController.topViewController;
+        viewController.delegate = self;
+    }
+}
+
+- (void)cameraFoundURL:(NSURL *)URL
 {
     // Long body: https://gist.github.com/simonmaddox/bc7c4f08399eed514e4821c4b52bd792
     // Lots of comments: https://gist.github.com/asweigart/6912168
     // Multiple files: https://gist.github.com/mattboldt/7621795
 
-    [self cameraScannedURL:[NSURL URLWithString:@"https://gist.github.com/simonmaddox/ad55000013918c85d24c29c291bfa90f"]];
-}
-
-- (void)cameraScannedURL:(NSURL *)URL
-{
     __weak typeof(self) weakSelf = self;
     [self.github fetchGistWithURL:URL completion:^(Gist * _Nonnull gist, NSError * _Nonnull error) {
         __strong typeof(weakSelf) strongSelf = weakSelf;

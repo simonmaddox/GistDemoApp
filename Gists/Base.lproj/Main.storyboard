@@ -46,7 +46,7 @@
                     <navigationItem key="navigationItem" title="Gist" id="oBw-wg-RJX">
                         <barButtonItem key="rightBarButtonItem" systemItem="camera" id="MW2-O5-gXL">
                             <connections>
-                                <action selector="showCameraPressed:" destination="BYZ-38-t0r" id="qbQ-M8-eu9"/>
+                                <segue destination="A9H-BU-KGb" kind="presentation" identifier="ShowCamera" id="h9O-3J-S3r"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -80,6 +80,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rx1-C5-plg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="149.59999999999999" y="-564.46776611694156"/>
+        </scene>
+        <!--Camera View Controller-->
+        <scene sceneID="hcZ-Jb-t4Z">
+            <objects>
+                <viewController id="z5q-Mr-huy" customClass="CameraViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UqB-pB-skU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="L92-w2-dsr"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="lxg-Kh-odo">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="ia7-1u-xY9">
+                            <connections>
+                                <action selector="cancelPressed:" destination="z5q-Mr-huy" id="smF-sG-ibj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="asn-bM-aty" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2743.1999999999998" y="-564.46776611694156"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3GJ-BC-Qtc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="A9H-BU-KGb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zDj-d1-p6M">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="z5q-Mr-huy" kind="relationship" relationship="rootViewController" id="cuM-Ex-FkC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eqL-TQ-qhO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1804" y="-564.46776611694156"/>
         </scene>
     </scenes>
 </document>
